@@ -25,7 +25,7 @@
             text-align: center;
         }
         h1 {
-            margin-top: 50px;
+            margin-top: 10px;
             margin-bottom: 10px;
         }
         img {
@@ -39,7 +39,6 @@
         button {
             border: 0;
             border-radius: 5px;
-            margin-top: 50px;
             height: 60px;
             width: 200px;
             font-size: 20px;
@@ -52,17 +51,33 @@
         button:hover {
             background: var(--tg-theme-secondary-bg-color);
         }
+        row {
+            display: flex;
+        }
     </style>
 </head>
 <body>
     <div id="main">
-        <h1>Онлайн магазин</h1>
-        <picture>
-          <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.webp" type="image/webp">
-          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.gif" alt="🍳">
-        </picture>
-        <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>
-        <button id="buy">Купить</button>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="display: flex;">
+            <div class="col">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.gif" alt="🍳">
+                <h1>Глазунья</h1>
+                <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>
+                <button class="buy">Добавить</button>
+            </div>
+            <div class="col">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f345/512.gif" alt="🍅">
+                <h1>Помидор</h1>
+                <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>
+                <button class="buy">Добавить</button>
+            </div>
+            <div class="col">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f35d/512.gif" alt="🍝">
+                 <h1>Спаггети</h1>
+                <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>
+                <button class="buy">Добавить</button>
+            </div>
+        </div>
     </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
