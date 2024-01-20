@@ -46,7 +46,7 @@
         .area_span {
             position: relative;
             color: var(--tg-theme-button-text-color);
-            background: #ffbf00;
+            background: #ffdb70;
             border: 0;
             border-radius: 5px;
             height: 5vw;
@@ -60,7 +60,7 @@
             width: 100%;
         }
         .area_span:hover {
-            background: var(--tg-theme-secondary-bg-color);
+            background: #ffbf00;
         }
         button {
             font-family: 'Montserrat', sans-serif;
@@ -110,103 +110,106 @@
             margin: 0 10%;
             border-radius: 10px;
             color: var(--tg-theme-button-text-color);
+            margin-top: 10%;
         }
     </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col" id="col1">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.gif" alt="🍳">
-            <h1>Глазунья</h1>
-            <span class="cost">159 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
+    <div class="catalog">
+        <div class="row">
+            <div class="col" id="col1">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.gif" alt="🍳">
+                <h1>Глазунья</h1>
+                <span class="cost">159 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
+            </div>
+            <div class="col" id="col2">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f345/512.gif" alt="🍅">
+                <h1>Помидор</h1>
+                <span class="cost">59 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
+            </div>
+            <div class="col" id="col3">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f35d/512.gif" alt="🍝">
+                <h1>Паста</h1>
+                <span class="cost">259 ₽</span>
+                <div class="area_span" onclick="getClickedElementId(this)">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
             </div>
         </div>
-        <div class="col" id="col2">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f345/512.gif" alt="🍅">
-            <h1>Помидор</h1>
-            <span class="cost">59 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
+        <div class="row">
+            <div class="col" id="col4">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f35c/512.gif" alt="🍜">
+                <h1>Боул</h1>
+                <span class="cost">359 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
+            </div>
+            <div class="col" id="col5">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f37f/512.gif" alt="🍿">
+                <h1>Попкорн</h1>
+                <span class="cost">259 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
+            </div>
+            <div class="col" id="col6">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f382/512.gif" alt="🎂">
+                <h1>Торт</h1>
+                <span class="cost">299 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
             </div>
         </div>
-        <div class="col" id="col3">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f35d/512.gif" alt="🍝">
-            <h1>Паста</h1>
-            <span class="cost">259 ₽</span>
-            <div class="area_span" onclick="getClickedElementId(this)">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
+        <div class="row">
+            <div class="col" id="col7">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2615/512.gif" alt="☕">
+                <h1>Кофе</h1>
+                <span class="cost">199 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col" id="col4">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f35c/512.gif" alt="🍜">
-            <h1>Боул</h1>
-            <span class="cost">359 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
+            <div class="col" id="col8">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f379/512.gif" alt="🍹">
+                <h1>Коктейль</h1>
+                <span class="cost">229 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
             </div>
-        </div>
-        <div class="col" id="col5">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f37f/512.gif" alt="🍿">
-            <h1>Попкорн</h1>
-            <span class="cost">259 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
-            </div>
-        </div>
-        <div class="col" id="col6">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f382/512.gif" alt="🎂">
-            <h1>Торт</h1>
-            <span class="cost">299 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col" id="col7">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2615/512.gif" alt="☕">
-            <h1>Кофе</h1>
-            <span class="cost">199 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
-            </div>
-        </div>
-        <div class="col" id="col8">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f379/512.gif" alt="🍹">
-            <h1>Коктейль</h1>
-            <span class="cost">229 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
-            </div>
-        </div>
-        <div class="col" id="col9">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f377/512.gif" alt="🍷">
-            <h1>Вино</h1>
-            <span class="cost">1299 ₽</span>
-            <div class="area_span">
-                <button class="minus" onclick="minus(this)">-</button>
-                <span onclick="getClickedElementId(this)">Добавить</span>
-                <button class="plus" onclick="plus(this)">+</button>
+            <div class="col" id="col9">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f377/512.gif" alt="🍷">
+                <h1>Вино</h1>
+                <span class="cost">1299 ₽</span>
+                <div class="area_span">
+                    <button class="minus" onclick="minus(this)">-</button>
+                    <span onclick="getClickedElementId(this)">Добавить</span>
+                    <button class="plus" onclick="plus(this)">+</button>
+                </div>
             </div>
         </div>
     </div>
