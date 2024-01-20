@@ -45,8 +45,8 @@
         }
         .area_span {
             position: relative;
-            color: var(--tg-theme-button-color);
-            background: #ffdb70;
+            color: var(--tg-theme-button-text-color);
+            background: var(--tg-theme-button-color);;
             border: 0;
             border-radius: 5px;
             height: 5vw;
