@@ -106,9 +106,7 @@ let tg = window.Telegram.WebApp;
     order.addEventListener("click", () =>{
         tg.close();
     });
-//cartItems.forEach((id) => console.log(id));
-//cartItems.forEach(function(id) {
-//    var prod = document.getElementById(id)
-//    console.log(prod)
-////    var img = prod.
-//});
+function inputClick(inp) {
+    var fath = inp.parentNode
+    fath.style.padding = "0 0 75vw 0";
+}
