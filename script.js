@@ -130,6 +130,7 @@
             padding: 1%;
             box-sizing: border-box;
             background: var(--tg-theme-secondary-bg-color);
+            width: 95%;
         }
         .cart_img {
             width: 10%;
