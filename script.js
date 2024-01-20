@@ -117,8 +117,8 @@ let tg = window.Telegram.WebApp;
             return;
         }
         let data = {
-            name: name
-            phone: number
+            name: name,
+            number: number,
         }
         tg.sendData(JSON.stringify(data))
         tg.close();
