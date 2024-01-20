@@ -46,7 +46,7 @@
         .area_span {
             position: relative;
             color: var(--tg-theme-button-text-color);
-            background: #ffdb70;
+            background: var(--tg-theme-button-color);;
             border: 0;
             border-radius: 5px;
             height: 5vw;
@@ -60,7 +60,7 @@
             width: 100%;
         }
         .area_span:hover {
-            background: #ffbf00;
+            background: #5bc8fb;
         }
         button {
             font-family: 'Montserrat', sans-serif;
@@ -123,6 +123,7 @@
             width: 100%;
             bottom: 0;
             transition: 0.5s ease-in-out;
+            font-size: 6vw;
         }
         input {
             color: var(--tg-theme-text-color);
@@ -130,6 +131,7 @@
             padding: 1%;
             box-sizing: border-box;
             background: var(--tg-theme-secondary-bg-color);
+            width: 95%;
         }
         .cart_img {
             width: 10%;
@@ -276,9 +278,11 @@
         </div>
     </div>
     <form id="form">
+        Оформление покупки
             <input type="text" placeholder="Имя" id="name" onclick="inputClick(this)">
             <input type="text" placeholder="Номер" id="number" onclick="inputClick(this)">
             <button id="order">Оформить</button>
+            <div id="error"></div>
         </form>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script src="script.js"></script>
