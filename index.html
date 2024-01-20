@@ -114,12 +114,15 @@
             cursor: pointer;
         }
         #form {
-            margin-top: 30%;
             display: none;
             align-items: center;
             flex-direction: column;
             border-radius: 10px 10px 0 0;
             background: var(--tg-theme-bg-color);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            transition: 0.5s ease-in-out;
         }
         input {
             color: var(--tg-theme-text-color);
@@ -150,11 +153,16 @@
             display: none;
         }
         #order {
-            width: 21%;
+            width: 35vw;
             height: 100%;
-            padding: 1% 0 1% 0;
             border-radius: 5px;
             background: var(--tg-theme-button-color);
+            font-size: 5vw;
+            padding: 1%;
+            margin-bottom: 5%;
+        }
+        #name {
+            margin-top: 5%;
         }
     </style>
 </head>
@@ -268,8 +276,8 @@
         </div>
     </div>
     <form id="form">
-            <input type="text" placeholder="Имя" id="name">
-            <input type="text" placeholder="Номер" id="number">
+            <input type="text" placeholder="Имя" id="name" onclick="inputClick(this)">
+            <input type="text" placeholder="Номер" id="number" onclick="inputClick(this)">
             <button id="order">Оформить</button>
         </form>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
