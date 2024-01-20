@@ -48,9 +48,9 @@
         }
         .area_span {
             position: relative;
-            color: var(--tg-theme-button-text-color);
-            background: var(--tg-theme-button-color);
-            border: 1px solid var(--tg-theme-button-text-color);
+            color: var(--tg-theme-span-color);
+            background: var(--tg-theme-span-text-color);
+            border: 0;
             border-radius: 5px;
             height: 5vw;
             width: 20vw;
@@ -62,8 +62,8 @@
         button {
             font-family: 'Montserrat', sans-serif;
             border: none;
-<!--            background: var(&#45;&#45;tg-theme-span-text-color);-->
-<!--            color: var(&#45;&#45;tg-theme-span-color);-->
+            background: var(--tg-theme-span-text-color);
+            color: var(--tg-theme-span-color);
             font-size: 2.5vw;
             cursor: pointer;
         }
@@ -71,13 +71,11 @@
             right: 1%;
             top: 0%;
             position: absolute;
-            border-left: 1px solid var(--tg-theme-button-text-color)
         }
         .minus {
             left: 1%;
             top: 0%;
             position: absolute;
-            border-right: 1px solid var(--tg-theme-button-text-color)
         }
         .col {
             display: flex;
