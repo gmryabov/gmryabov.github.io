@@ -67,7 +67,7 @@ function minus(element) {
 let tg = window.Telegram.WebApp;
     var cart = document.getElementById("cart");
     var order = document.getElementById("order");
-
+    tg.expand()
     cart.addEventListener("click", () =>{
         document.getElementById("catalog").style.display = "none";
         document.getElementById("form").style.display = "flex";
