@@ -33,19 +33,10 @@
             width: 350px;
             margin: 0 auto;
         }
-        button {
-            border: 0;
-            border-radius: 5px;
-            height: 5vw;
-            width: 25vw;
-            font-size: 3.5vw;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 500ms ease;
-            color: var(--tg-theme-button-color);
-            background: var(--tg-theme-button-text-color);
+        span {
+            font-size: 2.5vw;
         }
-        button:hover {
+        span:hover {
             background: var(--tg-theme-secondary-bg-color);
         }
         .row {
@@ -55,69 +46,152 @@
             text-align: center;
             justify-content: space-evenly;
         }
+        .area_span {
+            position: relative;
+            color: var(--tg-theme-span-color);
+            background: var(--tg-theme-span-text-color);
+            border: 1px solid var(--tg-theme-span-color);
+            border-radius: 5px;
+            height: 5vw;
+            width: 20vw;
+            font-size: 3.5vw;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+        }
+        button {
+            font-family: 'Montserrat', sans-serif;
+            border: none;
+            background: var(--tg-theme-span-text-color);
+            color: var(--tg-theme-span-color);
+            font-size: 2.5vw;
+            cursor: pointer;
+        }
+        .plus {
+            right: 1%;
+            top: 0%;
+            position: absolute;
+            border-left: 1px solid var(--tg-theme-span-color)
+        }
+        .minus {
+            left: 1%;
+            top: 0%;
+            position: absolute;
+            border-right: 1px solid var(--tg-theme-span-color)
+        }
+        .col {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: flex-end;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .plus, .minus {
+            width: 25%;
+            height: 100%;
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="row">
-        <div class="col">
+        <div class="col" id="col1">
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.gif" alt="🍳">
             <h1>Глазунья</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
-        <div class="col">
+        <div class="col" id="col2">
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f345/512.gif" alt="🍅">
             <h1>Помидор</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
-        <div class="col">
+        <div class="col" id="col3">
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f35d/512.gif" alt="🍝">
-             <h1>Спаггети</h1>
+             <h1>Спагетти</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col" id="col4">
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f35c/512.gif" alt="🍜">
             <h1>Боул</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
-        <div class="col">
+        <div class="col" id="col5">
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f37f/512.gif" alt="🍿">
             <h1>Попкорн</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
-        <div class="col">
+        <div class="col" id="col6">
              <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f382/512.gif" alt="🎂">
              <h1>Торт</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col" id="col7">
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2615/512.gif" alt="☕">
             <h1>Кофе</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
-        <div class="col">
+        <div class="col" id="col8">
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f379/512.gif" alt="🍹">
             <h1>Коктейль</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
-        <div class="col">
+        <div class="col" id="col9">
              <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f377/512.gif" alt="🍷">
              <h1>Вино</h1>
 <!--            <p>Текст описание. Текст описание. Текст описание. Текст описание. Текст описание. </p>-->
-            <button class="buy">Добавить</button>
+            <div class="area_span">
+                <button class="minus" onclick="minus(this)">-</button>
+                <span onclick="getClickedElementId(this)">Добавить</span>
+                <button class="plus" onclick="plus(this)">+</button>
+            </div>
         </div>
     </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
