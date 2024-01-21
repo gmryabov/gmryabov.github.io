@@ -11,6 +11,7 @@ var MainButton = tg.MainButton;
 MainButton.text = "Корзина"
 
 tg.onEvent('mainButtonClicked', function() {
+MainButton.hide();
 if (MainButton.text !== "Корзина") {
         document.getElementById("catalog").style.display = "none";
         document.getElementById("form").style.display = "flex";
