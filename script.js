@@ -97,16 +97,18 @@ cart.addEventListener("click", () =>{
         var name = prod.querySelector('h1').textContent;
         var cost = prod.querySelector('.cost').textContent;
         if (count == 1) {
-            data_items[name] = parseInt(cost);
-            data_items[name] = {'count': 1}
+            data_items[name]={"cost":parseInt(cost),
+                              "count": count,
+                              "summ": parseInt(cost)}
             code_html += "<div class='item'><img class='cart_img' src="+img.src+"><h1 class='cart_item_name'>"+name+"</h1><span class='cost_cart'>"+cost+"</span></div>"
         } else {
             if (arr.indexOf(target) !== -1) {
                 console.log("pass");
             } else {
                 arr.push(target)
-                data_items[name]=parseInt(cost)*count;
-                data_items[name]={'count': count}
+                data_items[name]={"cost":parseInt(cost),
+                                  "count": count,
+                                  "summ": parseInt(cost)*count}
                 code_html += "<div class='item'><img class='cart_img' src="+img.src+"><h1 class='cart_item_name'>"+name+"</h1><span class='cost_cart'>"+parseInt(cost)*count+" ₽</span></div>"
             }
         }
