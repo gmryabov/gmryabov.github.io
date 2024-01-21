@@ -65,12 +65,6 @@ function minus(element) {
 }
 
 let tg = window.Telegram.WebApp;
-var MainButton = Telegram.WebApp.MainButton;
-var BackButton = Telegram.WebApp.BackButton;
-
-MainButton.show();
-BackButton.show();
-
 
     var cart = document.getElementById("cart");
     var order = document.getElementById("order");
@@ -133,6 +127,7 @@ BackButton.show();
 
     });
     tg.close();
+    
 function inputClick(inp) {
     var fath = inp.parentNode
     fath.style.padding = "0 0 55vw 0";
