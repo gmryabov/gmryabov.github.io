@@ -65,15 +65,25 @@ function minus(element) {
 }
 
 let tg = window.Telegram.WebApp;
+var MainButton = WebApp.MainButton;
+var BackButton = WebApp.BackButton;
+
+MainButton.show();
+BackButton.show();
+
+
     var cart = document.getElementById("cart");
     var order = document.getElementById("order");
-    tg.expand()
+    tg.expand();
     cart.addEventListener("click", () =>{
+
+
+
         document.getElementById("catalog").style.display = "none";
         document.getElementById("form").style.display = "flex";
         var cartInner = document.getElementById("cart_inner");
         cartInner.style.display = "block"
-        document.getElementById("name").value = tg.initDataUnsafe.first_name + " " + tg.initDataUnsafe.last_name
+//        document.getElementById("name").value = tg.initDataUnsafe.first_name + " " + tg.initDataUnsafe.last_name
         console.log(cartItems)
         var code_html = "";
         var arr = [];
@@ -107,7 +117,6 @@ let tg = window.Telegram.WebApp;
         document.getElementById("error").innerText = ""
         let name = document.getElementById("name").value;
         let number = document.getElementById("number").value;
-
         if (name.length < 3) {
             document.getElementById("error").innerText = "Ошибка в имени"
             return;
@@ -121,8 +130,9 @@ let tg = window.Telegram.WebApp;
             number: number,
         }
         tg.sendData(JSON.stringify(data))
-        tg.close();
+
     });
+    tg.close();
 function inputClick(inp) {
     var fath = inp.parentNode
     fath.style.padding = "0 0 55vw 0";
