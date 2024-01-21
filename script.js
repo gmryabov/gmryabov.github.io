@@ -65,8 +65,8 @@ function minus(element) {
 }
 
 let tg = window.Telegram.WebApp;
-var MainButton = WebApp.MainButton;
-var BackButton = WebApp.BackButton;
+var MainButton = Telegram.WebApp.MainButton;
+var BackButton = Telegram.WebApp.BackButton;
 
 MainButton.show();
 BackButton.show();
