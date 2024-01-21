@@ -3,6 +3,7 @@ var cartItems = []
 var data_items = {}
 function getClickedElementId(button) {
     if (button.innerHTML == "Добавить") {
+        cart.style.background = "var(--tg-theme-button-color)"
         var father = button.parentNode;
         var grproduct = father.parentNode;
         button.innerHTML = 1;
@@ -11,7 +12,7 @@ function getClickedElementId(button) {
         plus[0].style.display = 'block';
         minus[0].style.display = 'block';
         var cost = grproduct.getElementsByClassName("cost")[0];
-        if (cart.textContent == "CART") {
+        if (cart.textContent == "Корзина") {
             cart.innerHTML = parseInt(cost.textContent)
             var item = button.parentNode.parentNode.id;
             cartItems.push(item)
@@ -55,6 +56,7 @@ function minus(element) {
         var minus = father.getElementsByClassName("minus");
         plus[0].style.display = 'none';
         minus[0].style.display = 'none';
+        cart.style.background = "lightgray"
     }
     var fatherMinus = element.parentNode.parentNode;
     var cost = parseInt(fatherMinus.getElementsByClassName("cost")[0].textContent);
@@ -96,6 +98,7 @@ cart.addEventListener("click", () =>{
         var cost = prod.querySelector('.cost').textContent;
         if (count == 1) {
             data_items[name] = parseInt(cost);
+            data_items[name] = {'count': 1}
             code_html += "<div class='item'><img class='cart_img' src="+img.src+"><h1 class='cart_item_name'>"+name+"</h1><span class='cost_cart'>"+cost+"</span></div>"
         } else {
             if (arr.indexOf(target) !== -1) {
@@ -103,6 +106,7 @@ cart.addEventListener("click", () =>{
             } else {
                 arr.push(target)
                 data_items[name]=parseInt(cost)*count;
+                data_items[name]={'count': count}
                 code_html += "<div class='item'><img class='cart_img' src="+img.src+"><h1 class='cart_item_name'>"+name+"</h1><span class='cost_cart'>"+parseInt(cost)*count+" ₽</span></div>"
             }
         }
