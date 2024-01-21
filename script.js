@@ -130,9 +130,9 @@ order.addEventListener("click", () =>{
         items: data_items,
     }
     tg.sendData(JSON.stringify(data))
-
+    tg.close();
 });
-tg.close();
+
 
 function inputClick(inp) {
     var fath = inp.parentNode
