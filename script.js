@@ -63,7 +63,7 @@ function minus(element) {
     var cartVal = parseInt(cart.textContent)
     cart.innerHTML = cartVal - cost
     if (cart.textContent == "0") {
-        cart.innerHTML = "CART"
+        cart.innerHTML = "Корзина"
     }
 }
 
@@ -116,16 +116,17 @@ cart.addEventListener("click", () =>{
 });
 
 
-order.addEventListener("click", () =>{
-    document.getElementById("error").innerText = ""
+var bol = order.addEventListener("click", () =>{
+    var error = document.getElementById("error")
+    error.innerText = ""
     let name = document.getElementById("name").value;
     let number = document.getElementById("number").value;
     if (name.length < 3) {
-        document.getElementById("error").innerText = "Ошибка в имени"
+        error.innerText = "Ошибка в имени"
         return;
     }
     if (number.length < 10) {
-        document.getElementById("error").innerText = "Ошибка в номере"
+        error.innerText = "Ошибка в номере"
         return;
     }
     let data = {
@@ -137,6 +138,7 @@ order.addEventListener("click", () =>{
     tg.close();
 });
 
+console.log(bol)
 
 function inputClick(inp) {
     var fath = inp.parentNode
