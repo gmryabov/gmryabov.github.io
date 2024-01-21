@@ -56,7 +56,6 @@ if (MainButton.text !== "Корзина") {
 function getClickedElementId(button) {
     if (button.innerHTML == "Добавить") {
         MainButton.show();
-        cart.style.background = "var(--tg-theme-button-color)"
         var father = button.parentNode;
         var grproduct = father.parentNode;
         button.innerHTML = 1;
@@ -65,14 +64,11 @@ function getClickedElementId(button) {
         plus[0].style.display = 'block';
         minus[0].style.display = 'block';
         var cost = grproduct.getElementsByClassName("cost")[0];
-        if (cart.textContent == "Корзина") {
-            cart.innerHTML = parseInt(cost.textContent)
+        if (MainButton.text == "Корзина") {
             MainButton.text = parseInt(cost.textContent)
             var item = button.parentNode.parentNode.id;
             cartItems.push(item)
         } else {
-            var cartVal = parseInt(cart.textContent) + parseInt(cost.textContent);
-            cart.innerHTML = cartVal
             MainButton.text = parseInt(MainButton.text) + parseInt(cost.textContent);
             var item = button.parentNode.parentNode.id;
             cartItems.push(item)
@@ -86,8 +82,6 @@ function plus(element) {
     spanElement.textContent = currentNumber + 1
     var fatherPlus = element.parentNode.parentNode;
     var cost = parseInt(fatherPlus.getElementsByClassName("cost")[0].textContent);
-    var cartVal = parseInt(cart.textContent)
-    cart.innerHTML = cartVal + cost
     MainButton.text = parseInt(MainButton.text) + cost
     var item = element.parentNode.parentNode.id;
     cartItems.push(item)
@@ -116,61 +110,16 @@ function minus(element) {
     var fatherMinus = element.parentNode.parentNode;
     var cost = parseInt(fatherMinus.getElementsByClassName("cost")[0].textContent);
     var cartVal = parseInt(cart.textContent)
-    cart.innerHTML = cartVal - cost
     MainButton.text = parseInt(MainButton.text) - cost
-    if (cart.textContent == "0") {
-        cart.innerHTML = "Корзина"
-        cart.style.background = "lightgray"
+    if (MainButton.text == "0") {
         MainButton.hide();
     }
 }
 
 
-var cart = document.getElementById("cart");
 var order = document.getElementById("order");
 tg.expand();
-//cart.addEventListener("click", () =>{
-//    if (cart.textContent !== "Корзина") {
-//        cart.style.cursor = "pointer"
-//        document.getElementById("catalog").style.display = "none";
-//        document.getElementById("form").style.display = "flex";
-//        cartInner.style.display = "block"
-//    //        document.getElementById("name").value = tg.initDataUnsafe.first_name + " " + tg.initDataUnsafe.last_name
-//        console.log(cartItems)
-//
-//        var arr = [];
-//        for (var i = 0; i < cartItems.length; i++)  {
-//            var target = cartItems[i];
-//            var count = 0;
-//                for (let i = 0; i < cartItems.length; i++) {
-//                    if (target == cartItems[i]) {
-//                        count++
-//                    }
-//                }
-//            var prod = document.getElementById(target)
-//            var img = prod.querySelector('img');
-//            var name = prod.querySelector('h1').textContent;
-//            var cost = prod.querySelector('.cost').textContent;
-//            if (count == 1) {
-//                data_items[name]={"cost":parseInt(cost),
-//                                  "count": count,
-//                                  "summ": parseInt(cost)}
-//                code_html += "<div class='item'><img class='cart_img' src="+img.src+"><h1 class='cart_item_name'>"+name+"</h1><span class='cost_cart'>"+cost+"</span></div>"
-//            } else {
-//                if (arr.indexOf(target) !== -1) {
-//                    console.log("pass");
-//                } else {
-//                    arr.push(target)
-//                    data_items[name]={"cost":parseInt(cost),
-//                                      "count": count,
-//                                      "summ": parseInt(cost)*count}
-//                    code_html += "<div class='item'><img class='cart_img' src="+img.src+"><h1 class='cart_item_name'>"+name+"</h1><span class='cost_cart'>"+parseInt(cost)*count+" ₽</span></div>"
-//                }
-//            }
-//        }
-//        cartInner.innerHTML = code_html
-//    }
-//});
+
 
 order.addEventListener("click", () =>{
     event.preventDefault();
