@@ -7,7 +7,7 @@ let tg = window.Telegram.WebApp;
 
 var MainButton = tg.MainButton;
 
-MainButton.show();
+
 MainButton.text = "Корзина"
 
 tg.onEvent('mainButtonClicked', function() {
@@ -53,9 +53,9 @@ if (MainButton.text !== "Корзина") {
 });
 
 
-
 function getClickedElementId(button) {
     if (button.innerHTML == "Добавить") {
+        MainButton.show();
         cart.style.background = "var(--tg-theme-button-color)"
         var father = button.parentNode;
         var grproduct = father.parentNode;
@@ -121,6 +121,7 @@ function minus(element) {
     if (cart.textContent == "0") {
         cart.innerHTML = "Корзина"
         cart.style.background = "lightgray"
+        MainButton.hide();
     }
 }
 
