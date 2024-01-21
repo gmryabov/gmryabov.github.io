@@ -66,11 +66,11 @@ function getClickedElementId(button) {
         minus[0].style.display = 'block';
         var cost = grproduct.getElementsByClassName("cost")[0];
         if (MainButton.text == "Корзина") {
-            MainButton.text = parseInt(cost.textContent)
+            MainButton.text = "Корзина: " + parseInt(cost.textContent) + " ₽";
             var item = button.parentNode.parentNode.id;
             cartItems.push(item)
         } else {
-            MainButton.text = parseInt(MainButton.text) + parseInt(cost.textContent);
+            MainButton.text = "Корзина: " + parseInt(MainButton.text) + parseInt(cost.textContent) + " ₽";
             var item = button.parentNode.parentNode.id;
             cartItems.push(item)
         }
@@ -83,7 +83,7 @@ function plus(element) {
     spanElement.textContent = currentNumber + 1
     var fatherPlus = element.parentNode.parentNode;
     var cost = parseInt(fatherPlus.getElementsByClassName("cost")[0].textContent);
-    MainButton.text = parseInt(MainButton.text) + cost
+    MainButton.text = "Корзина: " + parseInt(MainButton.text) + cost + " ₽";
     var item = element.parentNode.parentNode.id;
     cartItems.push(item)
 }
@@ -111,7 +111,7 @@ function minus(element) {
     var fatherMinus = element.parentNode.parentNode;
     var cost = parseInt(fatherMinus.getElementsByClassName("cost")[0].textContent);
     var cartVal = parseInt(cart.textContent)
-    MainButton.text = parseInt(MainButton.text) - cost
+    MainButton.text = "Корзина: " + parseInt(MainButton.text) - cost + " ₽"
     if (MainButton.text == "0") {
         MainButton.hide();
     }
@@ -148,7 +148,7 @@ order.addEventListener("click", () =>{
 
 function inputClick(inp) {
     var fath = inp.parentNode
-    fath.style.padding = "0 0 30% 0";
+    fath.style.padding = "0 0 45% 0";
 }
 
 
