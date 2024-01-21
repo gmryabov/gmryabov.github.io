@@ -172,6 +172,7 @@ cart.addEventListener("click", () =>{
 });
 
 order.addEventListener("click", () =>{
+    event.preventDefault();
     var error = document.getElementById("error")
     error.innerText = ""
     let name = document.getElementById("name").value;
