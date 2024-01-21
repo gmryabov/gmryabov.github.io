@@ -148,7 +148,7 @@ order.addEventListener("click", () =>{
 
 function inputClick(inp) {
     var fath = inp.parentNode
-    fath.style.padding = "0 0 45% 0";
+    fath.style.padding = "0 0 45vw 0";
 }
 
 
